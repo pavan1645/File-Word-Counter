@@ -5,14 +5,13 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class MainService {
+	private apiUrl = '/api/';
 
 	constructor(private http: Http) {
 	}
 
 	getWords(count){
-		var headers = new Headers();
-		headers.append('Access-Control-Allow-Origin', '*');
-		return this.http.get("http://localhost:3000/api/"+count, {headers: headers})
+		return this.http.get(this.apiUrl+count)
 		.map(res => res.json());
 	}
 
