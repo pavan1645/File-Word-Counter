@@ -1,0 +1,71 @@
+<nav class="black lighten-1" role="navigation">
+	<div class="nav-wrapper container">
+		<a id="logo-container" href="#" class="brand-logo center">File Word Counter</a>
+		<ul class="right hide-on-med-and-down">
+			<li>
+				<a href="http://pavanmahadik.tk">Portfolio</a>
+			</li>
+		</ul>
+		
+		<ul id="nav-mobile" class="side-nav">
+			<li>
+				<a href="http://pavanmahadik.tk">Portfolio</a>
+			</li>
+		</ul>
+		<a href="#" data-activates="nav-mobile" class="button-collapse">
+			<i class="material-icons">menu</i>
+		</a>
+	</div>
+</nav>
+<div class="section no-pad-bot grey white-text darken-1" id="index-banner">
+	<div class="container">
+		<br>
+		<br>
+		<h2 class="header center white-text">A word frequency counter</h2>
+		<div class="row center">
+			<h5 class="header col s12 light">
+				Enter number of words required
+			</h5>
+			<div class="row center">
+				<div class="col s4"></div>
+				<input #count (keyup.enter)="getWords(count.value)" type="text" placeholder="Eg. 5" class="col s4">
+			</div>
+			<button (click)="getWords(count.value)" class="btn-large waves-effect waves-light orange">Get words</button>
+		</div>
+		<br>
+		<br>		
+	</div>
+	
+	<div class="container">
+		<div class="section row">
+			<div class="col s2"></div>
+			<table class="col s8 centered bordered responsive-table highlight" id="op-table">
+				<thead class="grey lighten-1 black-text">
+					<tr>
+						<th>Word</th>
+						<th>Frequency</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let word of words">
+						<td>{{word.word}}</td>
+						<td>{{word.count}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<br>
+		<br>
+	</div>
+</div>
+
+
+
+<footer class="page-footer orange">
+	<div class="footer-copyright">
+		<div class="container">
+			&copy; Made by
+			<a class="orange-text text-lighten-4" href="http://pavanmahadik.tk">Pavankumar Mahadik</a>
+		</div>
+	</div>
+</footer>
