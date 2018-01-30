@@ -2,6 +2,12 @@
 It counts the frequency of words occurring in a file and displays top N frequently occurring words from user input.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.0.
 
+### Screenshots
+<p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1c6oAAS-QqgR_tJHj_VIFLF8xXu0lv9qK" width="350"/>
+  <img src="https://drive.google.com/uc?export=view&id=1-IVPNh1SuJPSXaUz-4SpAin-E7mymGgn" width="350"/>
+</p>
+
 ## Getting Started
 ```
 git clone https://github.com/pavan1645/File-Word-Counter.git
