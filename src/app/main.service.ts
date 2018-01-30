@@ -12,7 +12,7 @@ export class MainService {
 	getWords(count){
 		var headers = new Headers();
 		headers.append('Access-Control-Allow-Origin', '*');
-		return this.http.get("https://localhost:3000/api/"+count, {headers: headers})
+		return this.http.get("http://localhost:3000/api/"+count, {headers: headers})
 		.map(res => res.json());
 	}
 
