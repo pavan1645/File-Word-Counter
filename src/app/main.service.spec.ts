@@ -1,12 +1,14 @@
 import { TestBed, inject } from '@angular/core/testing';
 
+import {HttpModule} from '@angular/http';
 import { MainService } from './main.service';
 
 describe('MainService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [MainService]
-    });
+		imports: [HttpModule],
+		providers: [MainService]
+    }).compileComponents();
   });
 
   it('should be created', inject([MainService], (service: MainService) => {
