@@ -17,6 +17,6 @@ app.use(express.static(path.join(__dirname, 'dist')));
 //routes
 app.use('/api/', route);
 
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3000, function() {
 	console.log("Serving on port 3000");
 });
