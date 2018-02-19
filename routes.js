@@ -49,6 +49,7 @@ let init = new Promise((resolve, reject) => {
 
 function printObj(count) {
 	var body = [];
+	count = Math.min(count, keysSorted.length)
 	for (var i = 0; i < count; i++) {
 		var obj = {
 			word: keysSorted[i],
@@ -63,6 +64,7 @@ function printObj(count) {
 router.get("/:count", (req, res) => {
 	var count  = req.params.count;
 	var obj = {};
+	/* Check if already counted, if not count it */
 	if (!keysSorted) {
 		init.then(() => {
 			obj = printObj(count);
